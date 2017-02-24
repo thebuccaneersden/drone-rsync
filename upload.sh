@@ -109,9 +109,7 @@ echo "Contents = "
 cat $keyfile
 
 echo "======="
-ls -la
-echo "======="
-ls -la ../
+ls -la ./
 echo "======="
 
 # Parse SSH commands
