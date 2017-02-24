@@ -101,7 +101,7 @@ if [ $? -eq 0 ]; then
     printf "Using ecdsa based key\n"
     keyfile="$home/.ssh/id_ecdsa"
 fi
-echo "$SSH_KEY" > $keyfile
+echo "$SSH_KEY" | base64 --decode > $keyfile
 chmod 0600 $keyfile
 echo "Keyfile ="
 echo $keyfile
