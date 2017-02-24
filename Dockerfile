@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM armhf/alpine:3.4
 MAINTAINER Michael de Wit <michael@drillster.com>
 
 RUN apk add --no-cache ca-certificates bash openssh-client rsync
