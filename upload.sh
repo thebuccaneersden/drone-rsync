@@ -59,6 +59,10 @@ if [[ -n "$PLUGIN_DELETE" && "$PLUGIN_DELETE" == "true" ]]; then
     expr="$expr --del"
 fi
 
+if [[ -n "$PLUGIN_DELETEAFTER" && "$PLUGIN_DELETEAFTER" == "true" ]]; then
+    expr="$expr --delete-after"
+fi
+
 expr="$expr -e 'ssh -p $PORT -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o StrictHostKeyChecking=no'"
 
 # Include
