@@ -40,7 +40,6 @@ if [ -z "$RSYNC_KEY" ]; then
         exit 1
     fi
     SSH_KEY=$PLUGIN_KEY
-    echo $PLUGIN_KEY;
 fi
 
 if [ -z "$PLUGIN_ARGS" ]; then
@@ -103,14 +102,7 @@ if [ $? -eq 0 ]; then
 fi
 echo "$SSH_KEY" | base64 -d > $keyfile
 chmod 0600 $keyfile
-echo "Keyfile ="
-echo $keyfile
-echo "Contents = "
-cat $keyfile
 
-echo "======="
-ls -la ./
-echo "======="
 
 # Parse SSH commands
 function join_with { local d=$1; shift; echo -n "$1"; shift; printf "%s" "${@/#/$d}"; }
