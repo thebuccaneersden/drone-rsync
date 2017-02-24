@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Test"
+exit 1
+
 if [ -z "$PLUGIN_HOSTS" ]; then
     echo "Specify at least one host!"
     exit 1
