@@ -108,6 +108,12 @@ echo $keyfile
 echo "Contents = "
 cat $keyfile
 
+echo "======="
+ls -la
+echo "======="
+ls -la ../
+echo "======="
+
 # Parse SSH commands
 function join_with { local d=$1; shift; echo -n "$1"; shift; printf "%s" "${@/#/$d}"; }
 IFS=','; read -ra COMMANDS <<< "$PLUGIN_SCRIPT"
