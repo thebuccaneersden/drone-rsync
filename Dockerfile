@@ -1,5 +1,6 @@
 FROM armhf/alpine:3.4
-MAINTAINER Michael de Wit <michael@drillster.com>
+MAINTAINER Hans-Christian Andersen <ha@phulse.com>
+# Forked from Michael de Wit <michael@drillster.com>
 
 RUN apk add --no-cache ca-certificates bash openssh-client rsync
 COPY upload.sh /usr/local/
